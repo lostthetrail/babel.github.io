@@ -26,6 +26,15 @@ require("babel-register");
 All subsequent files required by node with the extensions `.es6`, `.es`, `.jsx`
 and `.js` will be transformed by Babel.
 
+<blockquote class="babel-callout babel-callout-warning">
+  <h4>Not meant for production use</h4>
+  <p>
+    You should not be using <code>babel-register</code> in production. It is unnecessarily heavy,
+    with high memory usage due to the cache being stored in memory. You will also always
+    experience a startup performance penalty as the entire app needs to be compiled on the fly.
+  </p>
+</blockquote>
+
 <blockquote class="babel-callout babel-callout-info">
   <h4>Polyfill not included</h4>
   <p>
